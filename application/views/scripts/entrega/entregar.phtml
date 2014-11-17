@@ -1,0 +1,52 @@
+﻿<div id="infoControle">
+	Entregas efetivadas à <span><?=$this->usuario->getNome()?></span> Pertencente a paróquia <span><?=$this->usuario->getParoquia()->getNome()?></span>. 
+</div>
+
+<form id="formCadastro" method="post" action="/entrega/entrega/qual/<?=$this->usuario->getId()?>/">
+
+	<ul class="campos">
+		<li class="field">Data Entrega</li>
+		<li><input <?=$this->util->dateFormatParam($this->obj, 'dataentrega', 'd/m/Y') ?> mask="99/99/9999 99:99" /></li>
+	</ul>
+	<ul class="campos">
+		<li><a class="botao" href="javascript:submit2()">Efetivar nova entrega</a></li>
+	</ul>
+
+</form>
+
+<div class="clearBoth"></div>
+
+<div id="painelControle">
+	<table class="grid">
+		<tr class="titulo">
+
+			<td class="first">
+				Quando foi entregue?
+			</td>
+			<td>
+				Quem entregou?
+			</td>
+			<td>
+				De qual paróquia?
+			</td>
+		</tr>
+		<?php foreach ($this->entregas as $entrega) { ?>
+		
+		<tr>
+			<td class="first">
+				<?=$this->util->formataDataDD($entrega->getDataEntrega());?> de
+				<?=$this->util->getMesPorExtenso($entrega->getDataEntrega());?> de
+				<?=$this->util->formataDataYYYY($entrega->getDataEntrega());?> às
+				<?=$this->util->formataHora99h99($entrega->getDataEntrega());?>
+			</td>
+			<td>
+				<?=$entrega->getSegUsuario()->getNome()?>
+			</td>
+			<td>
+				<?=$entrega->getSegUsuario()->getParoquia()->getNome()?>
+			</td>
+		</tr>
+		
+		<?php } ?>
+	</table>
+</div>

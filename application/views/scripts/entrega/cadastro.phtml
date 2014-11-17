@@ -1,0 +1,36 @@
+﻿<div class="info vEspaco">Os campos marcados com * são obrigatórios</div>
+<form id="formCadastro" method="post" action="/entrega/<?=$this->acao?>/">
+	<?php if($this->isUpdate){ ?>
+		<input type="hidden" name="id" value="<?=$this->obj->getId()?>"></input>
+	<?php } ?>
+	<input type="hidden" name="paroquia" value="<?=$this->sessionUsuario->getParoquia()->getId()?>"></input>
+	<ul class="campos">
+		<li class="field">Nome *</li>
+		<li><input <?=$this->util->textParam($this->obj, 'nome') ?> /></li>
+		<li class="field">Rg</li>
+		<li><input <?=$this->util->textParam($this->obj, 'rg') ?>/></li>
+		<li class="field">Cpf</li>
+		<li><input <?=$this->util->textParam($this->obj, 'cpf') ?> mask="999.999.999-99"/></li>
+	</ul>
+	<ul class="campos">
+		<li class="field">Telefone</li>
+		<li><input <?=$this->util->textParam($this->obj, 'telefone') ?> mask="(99) 9999-9999"/></li>
+		<li class="field">Nascimento</li>
+		<li><input <?=$this->util->dateFormatParam($this->obj, 'datanasc', 'd/m/Y') ?> mask="99/99/9999"/></li>
+		<li class="field">Endereço</li>
+		<li><input <?=$this->util->textParam($this->obj, 'endereco') ?> /></li>
+	</ul>
+	<ul class="campos">
+		<li class="field">Nome mãe *</li>
+		<li><input <?=$this->util->textParam($this->obj, 'nomemae') ?> /></li>
+		<li class="field">Nome pai *</li>
+		<li><input <?=$this->util->textParam($this->obj, 'nomepai') ?> /></li>
+		<li class="field">Cert Nasc</li>
+		<li><input <?=$this->util->textParam($this->obj, 'certnasc') ?> /></li>
+	</ul>
+	<ul class="campos">
+		<li class="field">Data Cadastro *</li>
+		<li><input <?=$this->util->dateFormatParam($this->obj, 'datacadastro', 'd/m/Y') ?> mask="99/99/9999" /></li>
+	</ul>
+	<a class="botao" href="javascript:submit2()">Salvar</a>
+</form>

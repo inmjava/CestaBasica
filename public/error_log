@@ -1,0 +1,8 @@
+[16-Jun-2013 17:47:56 America/Sao_Paulo] PHP Fatal error:  Uncaught exception 'Zend_Config_Exception' with message 'parse_ini_file(/home/catedral/public_html/neo/cestabasica/application/configs/application.ini) [<a href='function.parse-ini-file'>function.parse-ini-file</a>]: failed to open stream: No such file or directory' in /home/catedral/public_html/neo/cestabasica/library/Zend/Config/Ini.php:184
+Stack trace:
+#0 /home/catedral/public_html/neo/cestabasica/library/Zend/Config/Ini.php(125): Zend_Config_Ini->_loadIniFile('/home/catedral/...')
+#1 /home/catedral/public_html/neo/cestabasica/library/Zend/Application.php(363): Zend_Config_Ini->__construct('/home/catedral/...', 'development')
+#2 /home/catedral/public_html/neo/cestabasica/library/Zend/Application.php(85): Zend_Application->_loadConfig('/home/catedral/...')
+#3 /home/catedral/public_html/neo/cestabasica/public/index.php(29): Zend_Application->__construct('development', '/home/catedral/...')
+#4 {main}
+  thrown in /home/catedral/public_html/neo/cestabasica/library/Zend/Config/Ini.php on line 184

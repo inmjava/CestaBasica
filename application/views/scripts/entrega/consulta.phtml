@@ -1,0 +1,52 @@
+﻿<form id="consultaForm" action="/entrega/pesquisar/" method="get">
+	<ul class="campos">
+		<li class="field">Pesquisar</li>
+		<li><input name="query" /></li>
+	</ul>
+	<a class="botao" href="javascript:submit2()">Pesquisar</a>
+</form>
+
+<div class="clearBoth"></div>
+
+<div id="consultaResultado" align="center">
+	<table class="grid">
+		<tr class="titulo">
+			<td class="first">Nome</td>
+			<td>Paróquia</td>
+			<td>Rg</td>
+			<td>Cpf</td>
+			<td>Data Nasc.</td>
+			<td>Data Cadas.</td>
+			<td>Entrega</td>
+			<td>Editar</td>
+			<td>Excluir</td>
+		</tr>
+		<?php foreach ($this->usuarios as $usuario) { ?>
+		
+		<tr>
+			<td class="first"><?=$usuario->getNome()?$usuario->getNome():'--'?></td>
+			<td><?=$usuario->getParoquia()&&$usuario->getParoquia()->getNome()?$usuario->getParoquia()->getNome():'--'?></td>
+			<td><?=$usuario->getRg()?$usuario->getRg():'--'?></td>
+			<td><?=$usuario->getCpf()?$usuario->getCpf():'--'?></td>
+			<td><?=$usuario->getDataNasc()?$this->util->formataData('d/m/Y',$usuario->getDataNasc()):'--'?></td>
+			<td><?=$usuario->getDataNasc()?$this->util->formataData('d/m/Y',$usuario->getDataCadastro()):'--'?></td>
+			<td><a href="/entrega/entregar/qual/<?=$usuario->getId()?>"><img src="/imagens/entrega.png" /></a></td>
+			<td><a href="/entrega/edita/qual/<?=$usuario->getId()?>"><img src="/imagens/editar.png" /></a></td>
+			<td><a href="/entrega/excluir/qual/<?=$usuario->getId()?>"><img src="/imagens/excluir.png" /></a></td>
+		</tr>
+		
+		<?php } ?>
+		<tr>
+			<td class="first">&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+	</table>
+
+</div>

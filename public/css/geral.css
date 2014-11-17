@@ -1,0 +1,64 @@
+
+@import url(reset.css);
+
+html, body {background-color:#FFF; color:#333; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:11px; /*hack ie*/ margin:0; margin-bottom:20px; padding:0;}
+
+#geral {margin:20px}
+
+/* Utils */
+.clearBoth {clear:both;}
+.info {font-weight:bolder;}
+.vEspaco {margin-bottom:20px;}
+.left {float:left;}
+
+/* Campos */
+#geral ul.campos  {margin:0 0 20px 0;}
+#geral ul.campos li {display:inline-block;}
+#geral ul.campos li.field {font-size:17px; color:#ffccaa; width:77px; margin:0 20px 0 0; width:100px}
+#geral ul.campos li input {width:110px; color:#333}
+#geral ul.campos li input, 
+#geral ul.campos li select {font-size:12px; border:1px solid #6390c0; padding:5px; margin:0 20px 0 0;}
+#geral ul.campos li select option {color:#333;}
+#geral ul.campos li a.botao {margin:0 0 0 0; }
+
+/* Botão */
+#geral a.botao {padding:5px; border:1px solid #6f916f; background:#6f916f; color:#fff; display:block; float:left; text-decoration:none;}
+#geral a.botao:hover {background:#fff; color:#6f916f; cursor:pointer; _cursor:hand; }
+
+/* Grid */
+table.grid {border:1px solid #8e824f}
+table.grid tr td {padding:10px; border-top:1px solid #8e824f; border-left:1px solid #8e824f; font-size:13px;}
+table.grid tr.titulo td {font-size:18px; color:#ffccaa; border-top:0; font-weight:bold;}
+table.grid tr td.first {border-left:0}
+
+/* Login */
+#geral #loginForm {margin-top:100px;}
+#geral #loginForm #loginLogo {background-image:url("/imagens/login_logo.jpg");height:68px; width:388px; margin:0 0 20px 0; padding:98px 0 0 0; background-repeat:no-repeat;}
+#geral #loginForm a.botao {float:right; margin: 10px 82px 0 0;}
+
+/* Topo */
+#geral #topo {border:1px solid #8e824f; background:url("/imagens/logo.png"); background-repeat:no-repeat; background-position:15px 15px; width:548px; height:114px; padding:15px 0 0 418px;}
+#geral #topoInfo1 {font-size:13px; color:#a7ac93; margin:0 0 5px 0;}
+#geral #logout {float:right; margin:0 15px 0 0;}
+
+#geral ul#menus li {display:inline; margin:0 25px 0 0;}
+#geral ul#menus li a {font-size:18px; color:#8dd35f; text-decoration:none;}
+#geral ul#menus li a:hover {text-decoration:underline;}
+
+#geral #topoInfo2 {font-size:12px; color:#c8ab37; margin:45px 15px 0 0; float:right;}
+#geral #infoTela{font-size:50px; color:#c8ab37; margin:20px 0 40px 0;}
+
+/* Cadastro */
+#geral #formCadastro {width:801px}
+#geral #formCadastro a.botao {float:right; margin: 10px 20px 0 0;}
+
+/* Consulta */
+#geral #consultaResultado {margin:40px 0 0 0; width:966px;}
+#geral #consultaResultado table.grid tr td img {margin: 0 0 0 15px}
+
+/* Controle */
+#geral #infoControle {font-size:20px; color:#c8ab37; margin:20px 0 40px 0;}
+#geral #infoControle span {color:#803300;}
+
+#geral #painelControle {margin:20px 0 0 0;}
+

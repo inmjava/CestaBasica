@@ -1,0 +1,6 @@
+• Remover formatações, acessar:
+  /ckeditor/ckeditor.js
+
+• Acrescentar/remover estilos:
+  /ckeditor/plugins/stylescombo/styles/default.js (chamar os elementos adicionados em contents.css)
+  /ckeditor/contents.css (acrescentar os elementos)

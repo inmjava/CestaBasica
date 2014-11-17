@@ -1,0 +1,50 @@
+﻿<?php echo $this->doctype() ?>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=<?=$this->charset?$this->charset:'utf-8';?>" />
+    <title>Sistema de Entrega de Alimentos - Catedral Nossa Senhora de Lourdes</title>	
+	<?php
+		echo $this->headLink()->appendStylesheet('/css/geral.css');
+  		echo $this->headScript()->appendFile('/js/jquery-1.3.2.min.js')
+								->appendFile('/js/jquery-watermarkinput.js')
+								->appendFile('/js/jquery-corners.js')
+								->appendFile('/js/jquery.mask.js')
+								->appendFile('/js/jquery-chamadas.js')
+								->appendFile('/js/util.js');
+	?>
+</head>
+<body>
+	<?php if($this->erro){ ?>
+		<script>
+			$(function(){
+				alert('<?=$this->erro?>')
+			});
+		</script>
+	<?php } else if($this->msg){ ?>
+		<script>
+		$(function(){
+			alert('<?=$this->msg?>')
+		});
+		</script>
+	<?php } ?>
+	<div id="geral">
+	
+		<!-- Topo -->
+		<div id="topo">
+			<a href="/entrega/logout/" id="logout"><img src="/imagens/logout.png" ></a>
+			<div id="topoInfo1">O que deseja fazer?</div>
+			<ul id="menus">
+				<li><a href="/entrega/cadastro/">Cadastro</a></li>
+				<li><a href="/entrega/consulta/">Consulta</a></li>
+			</ul>
+			<div id="topoInfo2"><?=$this->saudacao?></div>
+		</div>
+
+		<!-- Info Tela -->
+		<div id="infoTela"><?=$this->infoTela?></div>
+		
+		<?php echo $this->layout()->content ?>
+		
+		</div>
+</body>
+</html>

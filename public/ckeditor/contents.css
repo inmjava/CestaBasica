@@ -1,0 +1,44 @@
+/*
+Copyright (c) 2003-2009, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.html or http://ckeditor.com/license
+*/
+
+body
+{
+	/* Font */
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 12px;
+
+	/* Text color */
+	color: #484848;
+
+	/* Remove the background color to make it transparent */
+	background-color: #fff;
+}
+
+html
+{
+	/* #3658: [IE6] Editor document has horizontal scrollbar on long lines
+	To prevent this misbehavior, we show the scrollbar always */
+	_overflow-y: scroll
+}
+
+img:-moz-broken
+{
+	-moz-force-broken-image-icon : 1;
+	width : 24px;
+	height : 24px;
+}
+img, input, textarea
+{
+	cursor: default;
+}
+
+/* ESTILOS PARA FORMATAÇÃO DO TEXTO */
+
+/*Título*/
+titulo {color:#484848; font-size:13px; font-weight:bold; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;}
+/*Texto*/
+texto {color:#484848; font-size:12px; font-weight:none; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;}
+/*Endereço*/
+endereco {color:#484848; font-size:12px; font-weight:none; font-style:italic; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif}
