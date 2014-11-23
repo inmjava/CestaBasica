@@ -3,9 +3,6 @@
 /**
  * Gateway de dados da tabela Entrega
  *
- 
- Ivan Nicoli Man!!!!!!
- 
  * @uses       Zend_Db_Table_Abstract
  * @subpackage Model
  */
