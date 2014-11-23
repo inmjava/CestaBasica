@@ -14,7 +14,7 @@ class Default_Model_DbTable_Usuario extends Zend_Db_Table_Abstract{
     /**
      * @var string do banco de dados
      */
-	protected $_schema = "catedral_cestabasica";
+	protected $_schema = "cesta";
     
     /**
      * @var string nome da tabela no banco de dados
