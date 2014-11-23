@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 /**
  *
@@ -46,8 +46,8 @@ class EntregaController extends Zend_Controller_Action{
 		$this->_util = $this->_helper->Util;
 		$this->view->util = $this->_helper->Util;
 		
-		//$this->view->charset="iso-8859-1";
-		$this->view->charset="utf8";
+		$this->view->charset="iso-8859-1";
+		//	$this->view->charset="utf8";
 
 		// construindo sessão
 		$this->_session = new Zend_Session_Namespace('/entrega');
@@ -83,8 +83,8 @@ class EntregaController extends Zend_Controller_Action{
 
 	public function carregaUsuario(){
 		$this->view->sessionUsuario = $this->_session->usuario;
-		$this->view->saudacao = date('H') < 12 ? "Bom dia" : (date('H') < 19 ? "Boa tarde" : "Boa noite");
-		$this->view->saudacao .= "! Seja bem vindo, " . $this->view->sessionUsuario->getNome();
+		$this->view->saudacao = date('H') < 6 ? "Boa Noite" : (date('H') < 12 ? "Bom Dia"  : (date('H') < 19 ? "Boa tarde" : "Boa noite"));
+		$this->view->saudacao .= "! Seja bem vindo(a), " . $this->view->sessionUsuario->getNome();
 	}
 
 	public function homeAction(){
@@ -222,10 +222,10 @@ class EntregaController extends Zend_Controller_Action{
 			}
 				
 			if($this->view->obj->getCertNasc()){
-				$usuario = new Default_Model_Usuario(array('certnasc' => $this->view->obj->getCertNasc()));
+				$usuario = new Default_Model_Usuario(array('certNasc' => $this->view->obj->getCertNasc()));
 				$usuario = $usuario->fetchListByExample($usuario, null, null, null, $where);
 				if(!$this->view->erro && $usuario){
-					$this->view->erro = 'Já existe outro usuário cadastrado com esta Certidão de Nascimento';
+					$this->view->erro = 'Já existe outro usuário cadastrado com esta Certidão de Nascimento' . $usuario[0]->getCertNasc();
 				}
 			}
 				
