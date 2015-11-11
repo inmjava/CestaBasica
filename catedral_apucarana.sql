@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 179.188.16.25
--- Tempo de Geração: 09/10/2015 às 09:26:20
+-- Tempo de Geração: 11/11/2015 às 16:32:56
 -- Versão do Servidor: 5.6.21
 -- Versão do PHP: 5.3.3-7+squeeze27
 
@@ -122,7 +122,14 @@ CREATE TABLE IF NOT EXISTS `tb_usuario` (
   `data_cadastro` datetime NOT NULL,
   PRIMARY KEY (`id`),
   KEY `tb_usuario_FKIndex1` (`cd_paroquia`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
+
+--
+-- Extraindo dados da tabela `tb_usuario`
+--
+
+INSERT INTO `tb_usuario` (`id`, `cd_paroquia`, `nome`, `rg`, `cpf`, `telefone`, `data_nasc`, `endereco`, `cert_nasc`, `nome_mae`, `nome_pai`, `data_cadastro`) VALUES
+(11, 4, 'Angelina Nascimento De Moraes', NULL, NULL, '(43) 3423-0144', '1925-07-19 00:00:00', 'Rua Domingos Alexandre, 30', NULL, 'Angelina Nascimento', 'Joao Nascimento', '2015-11-04 00:00:00');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
