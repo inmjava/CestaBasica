@@ -4,7 +4,7 @@
 --
 -- Servidor: 179.188.16.25
 -- Tempo de Geração: 11/11/2015 às 16:32:56
--- Versão do Servidor: 5.6.21
+-- Versão do Servidor: 5.6.21   
 -- Versão do PHP: 5.3.3-7+squeeze27
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
