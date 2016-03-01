@@ -48,3 +48,4 @@ are in your hosts file or in your DNS.
 
 Finally, point your browser to http://quickstart/ to see the
 application in action.
+
