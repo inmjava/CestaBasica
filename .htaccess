@@ -1,0 +1,12 @@
+<VirtualHost *:80>
+	ServerAdmin inmjava@yahoo.com.br
+	DocumentRoot /opt/app-root/src/public
+	ServerName quickstart
+
+	<Directory /opt/app-root/src/public>
+		DirectoryIndex index.php
+		AllowOverride All
+		Order allow,deny
+		Allow from all
+	</Directory>
+</VirtualHost>
