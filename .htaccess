@@ -1,7 +1,7 @@
 <VirtualHost *:80>
 	ServerAdmin inmjava@yahoo.com.br
 	DocumentRoot /opt/app-root/src/public
-	ServerName quickstart
+	ServerName cesta-cesta.44fs.preview.openshiftapps.com
 
 	<Directory /opt/app-root/src/public>
 		DirectoryIndex index.php
